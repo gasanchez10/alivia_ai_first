@@ -1,0 +1,266 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-violet: #6e3ff3;
+  --color-violet-50: #f4ecf5;
+  --color-violet-100: #e7d8fb;
+  --color-violet-600: #5a2dd8;
+  --color-plum: #5a3360;
+  --color-plum-600: #4a2a50;
+  --color-ink: #200d24;
+  --color-mauve: #884d89;
+  --color-lilac: #c8a2c9;
+  --color-lilac-50: #f4ecf5;
+  --color-bone: #fafaf9;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f4ecf5;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto,
+    'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto,
+    'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+:root {
+  --alivia-violet: #6e3ff3;
+  --alivia-plum: #5a3360;
+  --alivia-ink: #200d24;
+  --alivia-mauve: #884d89;
+  --alivia-lilac: #c8a2c9;
+  --alivia-lilac-50: #f4ecf5;
+  --alivia-bone: #fafaf9;
+  --alivia-surface: #ffffff;
+  --section-pad: clamp(4rem, 8vw, 6rem);
+}
+
+.dark {
+  --color-ink: #f4ecf5;
+  --color-plum: #d4b8d6;
+  --color-mauve: #c8a2c9;
+  --color-lilac: #6b4570;
+  --color-lilac-50: #1a1224;
+  --color-violet-50: #1a1330;
+  --color-violet-100: #2a1f45;
+  --color-bone: #0d0610;
+  --color-surface: #160d1c;
+  --color-surface-muted: #1f1428;
+  --alivia-ink: #f4ecf5;
+  --alivia-plum: #d4b8d6;
+  --alivia-mauve: #c8a2c9;
+  --alivia-lilac: #6b4570;
+  --alivia-lilac-50: #1a1224;
+  --alivia-bone: #0d0610;
+  --alivia-surface: #160d1c;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  font-size: 17px;
+}
+
+body {
+  margin: 0;
+  background: var(--alivia-bone);
+  color: var(--alivia-ink);
+  font-family: var(--font-sans);
+  line-height: 1.47;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.012em;
+}
+
+h1 {
+  letter-spacing: -0.022em;
+}
+
+::selection {
+  background: var(--alivia-violet);
+  color: #fff;
+}
+
+.landing-main > section + section {
+  border-top: 1px solid rgba(32, 13, 36, 0.04);
+}
+
+.dark .landing-main > section + section {
+  border-top-color: rgba(255, 255, 255, 0.06);
+}
+
+.bg-dot-grid {
+  background-image: radial-gradient(circle, #e7d8fb 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--alivia-violet);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.kenburns {
+  animation: kenburns 24s ease-in-out infinite alternate;
+  transform-origin: 55% 40%;
+  will-change: transform;
+}
+
+@keyframes kenburns {
+  0% {
+    transform: scale(1.02) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale(1.1) translate3d(-1%, -0.5%, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kenburns {
+    animation: none !important;
+  }
+  .float-slow,
+  .orbit-ring,
+  .feature-orbit,
+  .vs-slide-in {
+    animation: none !important;
+  }
+}
+
+/* Library / Briefing orbiting circles */
+.float-slow {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+.feature-orbit {
+  animation: floatOrbit 5s ease-in-out infinite;
+}
+
+.orbit-ring {
+  animation: orbitPulse 3s ease-in-out infinite;
+}
+
+@keyframes floatSlow {
+  0%,
+  100% {
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    transform: translate(-50%, calc(-50% - 10px));
+  }
+}
+
+@keyframes floatOrbit {
+  0%,
+  100% {
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    transform: translate(-50%, calc(-50% - 6px));
+  }
+}
+
+@keyframes vsSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.vs-slide-in {
+  animation: vsSlideIn 0.45s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vs-slide-in {
+    animation: none !important;
+  }
+}
+
+@keyframes orbitPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(110, 63, 243, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 0 14px rgba(110, 63, 243, 0);
+  }
+}
+
+/* Founder offer — urgency meter */
+.offer-glow {
+  animation: offerGlow 8s ease-in-out infinite alternate;
+}
+
+@keyframes offerGlow {
+  0% {
+    opacity: 0.45;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.75;
+    transform: scale(1.08);
+  }
+}
+
+.offer-progress {
+  transition: width 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.offer-slot-open:nth-child(3n) {
+  animation: slotPulse 2.8s ease-in-out infinite;
+}
+
+.offer-slot-open:nth-child(3n + 1) {
+  animation: slotPulse 2.8s ease-in-out infinite 0.6s;
+}
+
+.offer-slot-open:nth-child(3n + 2) {
+  animation: slotPulse 2.8s ease-in-out infinite 1.2s;
+}
+
+@keyframes slotPulse {
+  0%,
+  100% {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 0.38);
+  }
+}
+
+.offer-urgency {
+  animation: offerUrgency 2.2s ease-in-out infinite;
+}
+
+@keyframes offerUrgency {
+  0%,
+  100% {
+    opacity: 0.85;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .offer-glow,
+  .offer-slot-open,
+  .offer-urgency {
+    animation: none !important;
+  }
+  .offer-progress {
+    transition: none;
+  }
+}
