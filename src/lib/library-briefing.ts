@@ -11,8 +11,10 @@ import {
   HelpCircle,
 } from 'lucide-react'
 
-export const libraryImage = '/images/pain/night-study.jpg'
-export const briefingImage = '/images/hero-briefing.jpg'
+import { publicUrl } from '@/lib/utils'
+
+export const libraryImage = publicUrl('/images/pain/night-study.jpg')
+export const briefingImage = publicUrl('/images/hero-briefing.jpg')
 
 export const libraryFeatures: Record<
   'es' | 'en',

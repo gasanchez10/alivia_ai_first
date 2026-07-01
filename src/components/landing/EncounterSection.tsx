@@ -2,13 +2,14 @@ import { Mic, Tags, Search, FileCheck, ArrowRight } from 'lucide-react'
 import { Container, Section } from '@/components/ui/Container'
 import { useLocale } from '@/context/LocaleContext'
 import { t } from '@/lib/i18n'
+import { publicUrl } from '@/lib/utils'
 
 const STEP_ICONS = [Mic, Tags, Search, FileCheck]
 const STEP_KEYS = ['step1', 'step2', 'step3', 'step4'] as const
 
 const encounterImages = {
-  bedside: '/images/encounter/bedside-rounds.jpg',
-  study: '/images/encounter/study-coffee.jpg',
+  bedside: publicUrl('/images/encounter/bedside-rounds.jpg'),
+  study: publicUrl('/images/encounter/study-coffee.jpg'),
 }
 
 export function EncounterSection() {

@@ -6,9 +6,10 @@ import { Button } from '@/components/ui/Button'
 import { useLocale } from '@/context/LocaleContext'
 import { t } from '@/lib/i18n'
 import { getWaitlistCount } from '@/lib/waitlist'
+import { publicUrl } from '@/lib/utils'
 
-const HERO_BG = '/images/hero-background.jpg'
-const HERO_BRIEFING = '/images/hero-briefing.jpg'
+const HERO_BG = publicUrl('/images/hero-background.jpg')
+const HERO_BRIEFING = publicUrl('/images/hero-briefing.jpg')
 
 const briefingItems = {
   es: [

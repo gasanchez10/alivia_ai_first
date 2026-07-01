@@ -19,16 +19,18 @@ export interface VsRow {
   imageAlt: string
 }
 
+import { publicUrl } from '@/lib/utils'
+
 const images = {
-  evidence: '/images/vs/evidence.jpg',
-  summarize: '/images/vs/summarize.jpg',
-  journalClub: '/images/vs/journal-club.jpg',
-  specialist: '/images/vs/specialist.jpg',
-  commute: '/images/vs/commute.jpg',
-  language: '/images/vs/language.jpg',
+  evidence: publicUrl('/images/vs/evidence.jpg'),
+  summarize: publicUrl('/images/vs/summarize.jpg'),
+  journalClub: publicUrl('/images/vs/journal-club.jpg'),
+  specialist: publicUrl('/images/vs/specialist.jpg'),
+  commute: publicUrl('/images/vs/commute.jpg'),
+  language: publicUrl('/images/vs/language.jpg'),
 } as const
 
-export const vsGenericImage = '/images/vs/generic-ai.jpg'
+export const vsGenericImage = publicUrl('/images/vs/generic-ai.jpg')
 
 export const vsComparison: Record<'es' | 'en', VsRow[]> = {
   es: [
