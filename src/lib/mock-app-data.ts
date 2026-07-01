@@ -372,14 +372,6 @@ export const encounterStudyPlan = {
     'Apixabán 5 mg c/12 h como primera línea (MinSalud, PMID 38291044). Menor sangrado mayor vs warfarina en metaanálisis NEJM 2024 (PMID 38472910). Ajustar a 2.5 mg si ≥2 criterios de dosis reducida.',
 }
 
-export const consultaPico = {
-  patient: 'Mujer 58 años, HTA, dislipidemia',
-  question: '¿Los iSGLT2 reducen eventos cardiovasculares en pacientes sin diabetes?',
-  intervention: 'Inhibidores SGLT2',
-  comparison: 'Placebo o estándar',
-  outcome: 'MACE, muerte cardiovascular, hospitalización por IC',
-}
-
 export const seedManagementPlans: ManagementPlan[] = [
   {
     id: 'plan-ronda-seed',
@@ -403,19 +395,19 @@ export const seedManagementPlans: ManagementPlan[] = [
     updatedAt: '2026-06-29T09:15:00.000Z',
   },
   {
-    id: 'plan-consulta-seed',
-    patientLabel: consultaPico.patient,
-    specialistQuestion: consultaPico.question,
+    id: 'plan-ronda-seed-2',
+    patientLabel: 'Mujer 58 años, HTA, dislipidemia',
+    specialistQuestion: '¿Los iSGLT2 reducen eventos cardiovasculares en pacientes sin diabetes?',
     searchContext: {
-      sourceLabel: 'Consulta · iSGLT2 sin diabetes',
-      clinicalQuestion: consultaPico.question,
-      patientLabel: consultaPico.patient,
+      sourceLabel: 'Ronda · Cama 8',
+      clinicalQuestion: '¿Los iSGLT2 reducen eventos cardiovasculares en pacientes sin diabetes?',
+      patientLabel: 'Mujer 58 años, HTA, dislipidemia',
       pmids: ['38472910', '38291044'],
-      origin: 'consulta',
+      origin: 'ronda',
     },
     items: [
       {
-        id: 'consulta-item-1',
+        id: 'ronda2-item-1',
         claim:
           'Recomendar iSGLT2 en paciente sin diabetes con IC o alto riesgo CV, citando ensayos con empagliflozina y dapagliflozina.',
         pmid: '38472910',
@@ -423,7 +415,7 @@ export const seedManagementPlans: ManagementPlan[] = [
         completed: false,
       },
       {
-        id: 'consulta-item-2',
+        id: 'ronda2-item-2',
         claim: 'Documentar beneficio en MACE y hospitalización por IC en la nota de evolución.',
         pmid: '38291044',
         priority: 'baja',

@@ -46,11 +46,7 @@ export const navFamilies: NavFamily[] = [
     label: 'Clínico',
     path: '/app/ronda',
     icon: Stethoscope,
-    description: 'Rondas con paciente y consultas con evidencia',
-    children: [
-      { path: '/app/ronda', label: 'Ronda' },
-      { path: '/app/consulta', label: 'Consulta' },
-    ],
+    description: 'Rondas con paciente y evidencia PubMed',
   },
   {
     id: 'library',

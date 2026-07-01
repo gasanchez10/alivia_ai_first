@@ -38,7 +38,7 @@ export const vsComparison: Record<'es' | 'en', VsRow[]> = {
       task: 'Buscar evidencia',
       tagline: 'PubMed en vivo, desde tu paciente o tu pregunta clínica.',
       description:
-        'Alivia extrae términos MeSH de la ronda o de tu consulta, busca en PubMed en tiempo real y te muestra artículos con DOI clickeable. Tú eliges cuáles usar — sin salir de tu flujo ni perder la tarde en el buscador.',
+        'Alivia extrae términos MeSH de la ronda, busca en PubMed en tiempo real y te muestra artículos con DOI clickeable. Tú eliges cuáles usar — sin salir de tu flujo ni perder la tarde en el buscador.',
       others: 'Fuentes a veces inventadas',
       alivia: 'PubMed en vivo con DOI',
       icon: Search,

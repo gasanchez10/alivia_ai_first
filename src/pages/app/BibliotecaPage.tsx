@@ -228,7 +228,7 @@ export function BibliotecaPage() {
               {papers.length === 0 ? (
                 <AppCard className="border-dashed border-violet/30 bg-violet/5">
                   <p className="text-sm text-plum/70">
-                    Sin papers aún. Sube uno arriba o selecciona artículos en La Ronda o Consulta.
+                    Sin papers aún. Sube uno arriba o selecciona artículos en La Ronda.
                   </p>
                 </AppCard>
               ) : filteredPapers.length === 0 ? (
@@ -329,7 +329,7 @@ export function BibliotecaPage() {
           {presentations.length === 0 ? (
             <AppCard className="border-dashed border-violet/30 bg-violet/5 sm:col-span-2">
               <p className="text-sm text-plum/70">
-                Genera una presentación desde los papers de una búsqueda en La Ronda o Consulta.
+                Genera una presentación desde los papers de una búsqueda en La Ronda.
               </p>
             </AppCard>
           ) : (

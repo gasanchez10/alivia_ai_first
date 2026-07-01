@@ -1,4 +1,4 @@
-import { quizQuestions, consultaPico, type PubMedResult, type QuizQuestion } from '@/lib/mock-app-data'
+import { quizQuestions, type PubMedResult, type QuizQuestion } from '@/lib/mock-app-data'
 
 export const QUIZ_QUESTION_COUNT = 5
 
@@ -17,14 +17,6 @@ export function rondaEvidenceContext(
     patientLabel: patient,
     clinicalQuestion,
     sourceLabel: `Ronda · ${rondaTitle}`,
-  }
-}
-
-export function consultaEvidenceContext(): EvidenceToolkitContext {
-  return {
-    patientLabel: consultaPico.patient,
-    clinicalQuestion: consultaPico.question,
-    sourceLabel: 'Nueva consulta',
   }
 }
 

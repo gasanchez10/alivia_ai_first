@@ -90,7 +90,7 @@ export const tutorialSteps: TutorialStep[] = [
     path: '/app/ronda',
     section: 'Toolkit de evidencia',
     title: 'Generar desde tus papers',
-    body: 'El toolkit aparece en Ronda, Consulta y Biblioteca. Con los papers seleccionados puedes crear presentación, quiz, podcast y chat.',
+    body: 'El toolkit aparece en Ronda y Biblioteca. Con los papers seleccionados puedes crear presentación, quiz, podcast y chat.',
   },
   {
     id: 'toolkit-presentation',
@@ -121,39 +121,11 @@ export const tutorialSteps: TutorialStep[] = [
     body: 'Pregunta sobre el paciente y los papers seleccionados. Las respuestas citan PMIDs — sin inventar referencias.',
   },
   {
-    id: 'consulta-intro',
-    path: '/app/consulta',
-    section: 'Clínico · Consulta',
-    title: 'Nueva consulta clínica',
-    body: 'Plantea una pregunta PICO, busca en PubMed y obtén una respuesta citada para el caso.',
-  },
-  {
-    id: 'consulta-pico',
-    path: '/app/consulta',
-    section: 'Consulta · PICO',
-    title: 'Caso y PICO',
-    body: 'Define paciente, pregunta clínica e intervención/comparador/desenlace. Pulsa Buscar en PubMed para ver resultados clasificados.',
-  },
-  {
-    id: 'consulta-results',
-    path: '/app/consulta',
-    section: 'Consulta · Fuentes',
-    title: 'Elegir fuentes',
-    body: 'Selecciona papers para la respuesta y para el toolkit. También puedes generar presentación, quiz o podcast desde aquí.',
-  },
-  {
-    id: 'consulta-answer',
-    path: '/app/consulta',
-    section: 'Consulta · Respuesta',
-    title: 'Respuesta citada',
-    body: 'Al generar la respuesta se crea un plan de manejo en Estudio y quedan las fuentes enlazadas a PubMed.',
-  },
-  {
     id: 'library-papers',
     path: '/app/biblioteca',
     section: 'Biblioteca · Papers',
     title: 'Tus papers guardados',
-    body: 'Artículos de rondas, consultas o briefing. Haz clic en uno para ver el resumen estructurado y el toolkit.',
+    body: 'Artículos de rondas o briefing. Haz clic en uno para ver el resumen estructurado y el toolkit.',
   },
   {
     id: 'library-upload',
@@ -202,7 +174,7 @@ export const tutorialSteps: TutorialStep[] = [
     path: '/app/tareas',
     section: 'Estudio',
     title: 'Planes de manejo',
-    body: 'Afirmaciones citadas por paciente o caso. Cada plan enlaza a la ronda o consulta que lo generó.',
+    body: 'Afirmaciones citadas por paciente o caso. Cada plan enlaza a la ronda que lo generó.',
   },
   {
     id: 'study-items',

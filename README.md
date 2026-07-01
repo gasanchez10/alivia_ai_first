@@ -28,7 +28,7 @@ npm run preview
 
 ## Guía interactiva
 
-Tras iniciar sesión, una barra inferior recorre **33 pasos** por todos los módulos y capacidades. Usa **Ocultar guía** para desactivarla; el botón **Ver guía** la reactiva.
+Tras iniciar sesión, una barra inferior recorre **29 pasos** por todos los módulos y capacidades. Usa **Ocultar guía** para desactivarla; el botón **Ver guía** la reactiva.
 
 ## Login demo
 
@@ -41,7 +41,6 @@ Cualquier email con contraseña `demo123` inicia sesión mock.
 | Landing | `/` |
 | App | `/app` |
 | Ronda | `/app/ronda` |
-| Consulta | `/app/consulta` |
 | Biblioteca | `/app/biblioteca` |
 | Planes de manejo | `/app/tareas` |
 

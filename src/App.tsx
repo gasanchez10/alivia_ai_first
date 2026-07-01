@@ -7,7 +7,6 @@ import { AppLayout } from '@/components/app/AppLayout'
 import { DashboardPage } from '@/pages/app/DashboardPage'
 import { BriefingPage } from '@/pages/app/BriefingPage'
 import { EncuentroPage } from '@/pages/app/EncuentroPage'
-import { ConsultaPage } from '@/pages/app/ConsultaPage'
 import { BibliotecaPage } from '@/pages/app/BibliotecaPage'
 import { TareasPage } from '@/pages/app/TareasPage'
 import { TrendingPage } from '@/pages/app/TrendingPage'
@@ -47,7 +46,7 @@ function AppRoutes() {
         <Route path="trending" element={<Navigate to="/app/briefing/citados" replace />} />
         <Route path="ronda" element={<EncuentroPage />} />
         <Route path="encuentro" element={<Navigate to="/app/ronda" replace />} />
-        <Route path="consulta" element={<ConsultaPage />} />
+        <Route path="consulta" element={<Navigate to="/app/ronda" replace />} />
         <Route path="biblioteca/:section?" element={<BibliotecaPage />} />
         <Route path="presentaciones" element={<Navigate to="/app/biblioteca/presentaciones" replace />} />
         <Route path="cuestionario" element={<Navigate to="/app/biblioteca/cuestionarios" replace />} />

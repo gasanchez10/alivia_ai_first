@@ -22,7 +22,7 @@ export function PresentacionesPage() {
       <PageHeader
         section="Biblioteca"
         title="Presentaciones"
-        description="Diapositivas con citas para journal club y exposiciones — exporta PPTX. También puedes generarlas desde La Ronda o una consulta."
+        description="Diapositivas con citas para journal club y exposiciones — exporta PPTX. También puedes generarlas desde La Ronda."
         action={
           <Button>
             <Plus size={18} /> Nueva presentación

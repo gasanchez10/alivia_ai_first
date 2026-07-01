@@ -87,13 +87,9 @@ export function TareasPage() {
       {plans.length === 0 ? (
         <AppCard className="border-dashed border-violet/30 bg-violet/5">
           <p className="text-sm text-plum/70">
-            Aún no tienes planes. Genera uno desde una búsqueda en{' '}
+            Aún no tienes planes. Genera uno al cerrar una búsqueda en{' '}
             <Link to="/app/ronda" className="font-semibold text-violet hover:underline">
               Ronda
-            </Link>{' '}
-            o{' '}
-            <Link to="/app/consulta" className="font-semibold text-violet hover:underline">
-              Consulta
             </Link>
             .
           </p>
@@ -206,10 +202,6 @@ export function TareasPage() {
         Los planes se generan al cerrar una búsqueda en{' '}
         <Link to="/app/ronda" className="font-semibold text-violet hover:underline">
           Ronda
-        </Link>{' '}
-        o al obtener respuesta en{' '}
-        <Link to="/app/consulta" className="font-semibold text-violet hover:underline">
-          Consulta
         </Link>
         .
       </p>

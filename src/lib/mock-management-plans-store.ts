@@ -2,7 +2,6 @@ import {
   seedManagementPlans,
   type ManagementPlan,
   type ManagementPlanItem,
-  type PlanItemPriority,
 } from '@/lib/mock-app-data'
 import type { LibrarySearchContext } from '@/lib/library-search-context'
 import type { PubMedResult } from '@/lib/mock-app-data'
@@ -86,43 +85,6 @@ export function addManagementPlanFromRonda(
       completed: false,
     })),
     createdAt: session.createdAt,
-    updatedAt: new Date().toISOString(),
-  })
-}
-
-export function addManagementPlanFromConsulta(
-  selected: PubMedResult[],
-  patientLabel: string,
-  clinicalQuestion: string,
-): void {
-  if (selected.length === 0) return
-
-  const pmids = selected.map((a) => a.pmid).sort().join('-')
-  const id = `plan-consulta-${pmids.slice(0, 24)}`
-
-  if (getManagementPlans().some((p) => p.id === id)) return
-
-  const searchContext: LibrarySearchContext = {
-    sourceLabel: 'Consulta · Nueva consulta',
-    clinicalQuestion,
-    patientLabel,
-    pmids: selected.map((a) => a.pmid),
-    origin: 'consulta',
-  }
-
-  upsertManagementPlan({
-    id,
-    patientLabel,
-    specialistQuestion: clinicalQuestion,
-    searchContext,
-    items: selected.map((article, i) => ({
-      id: `${id}-${article.pmid}`,
-      claim: `Incorporar evidencia: ${article.title}`,
-      pmid: article.pmid,
-      priority: (i === 0 ? 'alta' : 'media') as PlanItemPriority,
-      completed: false,
-    })),
-    createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
   })
 }

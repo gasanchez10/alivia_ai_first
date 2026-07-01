@@ -239,7 +239,7 @@ export function CuestionarioPage() {
       {sortedAttempts.length === 0 ? (
         <AppCard className="border-dashed border-violet/30 bg-violet/5">
           <p className="text-sm text-plum/80">
-            Aún no hay intentos guardados. Genera un quiz desde La Ronda o Nueva consulta al seleccionar papers.
+            Aún no hay intentos guardados. Genera un quiz desde La Ronda al seleccionar papers.
           </p>
         </AppCard>
       ) : (

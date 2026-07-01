@@ -2,7 +2,7 @@ import type { EvidenceToolkitContext } from '@/lib/evidence-toolkit'
 import type { PubMedResult } from '@/lib/mock-app-data'
 import type { StoredQuiz } from '@/lib/mock-quizzes-store'
 
-export type SearchOrigin = 'ronda' | 'consulta'
+export type SearchOrigin = 'ronda'
 
 export interface LibrarySearchContext {
   sourceLabel: string
@@ -12,17 +12,15 @@ export interface LibrarySearchContext {
   origin: SearchOrigin
 }
 
-export function searchOriginPath(origin: SearchOrigin): string {
-  return origin === 'consulta' ? '/app/consulta' : '/app/ronda'
+export function searchOriginPath(_origin: SearchOrigin = 'ronda'): string {
+  return '/app/ronda'
 }
 
 export function contextFromEvidence(
   context: EvidenceToolkitContext,
   papers: PubMedResult[],
 ): LibrarySearchContext {
-  const origin: SearchOrigin = context.sourceLabel.toLowerCase().includes('consulta')
-    ? 'consulta'
-    : 'ronda'
+  const origin: SearchOrigin = 'ronda'
   return {
     sourceLabel: context.sourceLabel,
     clinicalQuestion: context.clinicalQuestion,
@@ -38,7 +36,7 @@ export function contextFromQuiz(quiz: StoredQuiz): LibrarySearchContext {
     clinicalQuestion: quiz.clinicalQuestion,
     patientLabel: quiz.patientLabel,
     pmids: quiz.pmids,
-    origin: quiz.sourceLabel.toLowerCase().includes('consulta') ? 'consulta' : 'ronda',
+    origin: 'ronda',
   }
 }
 
