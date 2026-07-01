@@ -1,7 +1,5 @@
 @import 'tailwindcss';
 
-@custom-variant dark (&:where(.dark, .dark *));
-
 @theme {
   --color-violet: #6e3ff3;
   --color-violet-50: #f4ecf5;
@@ -14,8 +12,6 @@
   --color-lilac: #c8a2c9;
   --color-lilac-50: #f4ecf5;
   --color-bone: #fafaf9;
-  --color-surface: #ffffff;
-  --color-surface-muted: #f4ecf5;
   --font-sans: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto,
     'Helvetica Neue', Helvetica, Arial, sans-serif;
   --font-display: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto,
@@ -30,28 +26,7 @@
   --alivia-lilac: #c8a2c9;
   --alivia-lilac-50: #f4ecf5;
   --alivia-bone: #fafaf9;
-  --alivia-surface: #ffffff;
   --section-pad: clamp(4rem, 8vw, 6rem);
-}
-
-.dark {
-  --color-ink: #f4ecf5;
-  --color-plum: #d4b8d6;
-  --color-mauve: #c8a2c9;
-  --color-lilac: #6b4570;
-  --color-lilac-50: #1a1224;
-  --color-violet-50: #1a1330;
-  --color-violet-100: #2a1f45;
-  --color-bone: #0d0610;
-  --color-surface: #160d1c;
-  --color-surface-muted: #1f1428;
-  --alivia-ink: #f4ecf5;
-  --alivia-plum: #d4b8d6;
-  --alivia-mauve: #c8a2c9;
-  --alivia-lilac: #6b4570;
-  --alivia-lilac-50: #1a1224;
-  --alivia-bone: #0d0610;
-  --alivia-surface: #160d1c;
 }
 
 html {
@@ -62,12 +37,11 @@ html {
 
 body {
   margin: 0;
-  background: var(--alivia-bone);
+  background: #fff;
   color: var(--alivia-ink);
   font-family: var(--font-sans);
   line-height: 1.47;
   -webkit-font-smoothing: antialiased;
-  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 h1,
@@ -90,10 +64,6 @@ h1 {
 
 .landing-main > section + section {
   border-top: 1px solid rgba(32, 13, 36, 0.04);
-}
-
-.dark .landing-main > section + section {
-  border-top-color: rgba(255, 255, 255, 0.06);
 }
 
 .bg-dot-grid {

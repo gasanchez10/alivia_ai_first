@@ -13,7 +13,7 @@ export function AppCard({
   return (
     <div
       className={cn(
-        'rounded-2xl border border-lilac/30 bg-surface p-5 shadow-sm dark:border-lilac/20 dark:shadow-none',
+        'rounded-2xl border border-lilac/30 bg-white p-5 shadow-sm',
         hover && 'transition hover:border-violet/25 hover:shadow-md',
         className,
       )}

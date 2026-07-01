@@ -15,7 +15,7 @@ export function FamilySubNav({ items }: { items: NavChild[] }) {
               'shrink-0 rounded-full px-4 py-2 text-sm font-medium transition',
               isActive
                 ? 'bg-violet text-white shadow-sm'
-                : 'text-plum/70 hover:bg-lilac-50 hover:text-plum dark:hover:bg-white/10',
+                : 'text-plum/70 hover:bg-lilac-50 hover:text-plum',
             )
           }
         >

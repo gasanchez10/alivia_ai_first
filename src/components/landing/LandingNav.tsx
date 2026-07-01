@@ -3,7 +3,6 @@ import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { Logo } from '@/components/ui/Logo'
 import { Button } from '@/components/ui/Button'
-import { ThemeToggle } from '@/components/ui/ThemeToggle'
 import { useLocale } from '@/context/LocaleContext'
 import { t } from '@/lib/i18n'
 
@@ -27,7 +26,7 @@ export function LandingNav() {
   }
 
   return (
-    <header className="sticky top-0 z-50 border-b border-ink/5 bg-surface/90 backdrop-blur-md dark:border-white/10">
+    <header className="sticky top-0 z-50 border-b border-ink/5 bg-white/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3 md:px-8">
         <Link to="/">
           <Logo />
@@ -47,11 +46,10 @@ export function LandingNav() {
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
-          <ThemeToggle />
           <button
             type="button"
             onClick={() => setLocale(locale === 'es' ? 'en' : 'es')}
-            className="rounded-full px-3 py-1.5 text-sm font-medium text-plum hover:bg-lilac-50 dark:hover:bg-white/10"
+            className="rounded-full px-3 py-1.5 text-sm font-medium text-plum hover:bg-lilac-50"
           >
             {locale === 'es' ? 'EN' : 'ES'}
           </button>
@@ -74,7 +72,7 @@ export function LandingNav() {
       </div>
 
       {open && (
-        <div className="border-t border-ink/5 bg-surface px-5 py-4 md:hidden dark:border-white/10">
+        <div className="border-t border-ink/5 bg-white px-5 py-4 md:hidden">
           {navLinks.map((l) => (
             <button
               key={l.key}

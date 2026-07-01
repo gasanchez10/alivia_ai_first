@@ -26,9 +26,9 @@ npm run build
 npm run preview
 ```
 
-## Modo oscuro
+## Guía interactiva
 
-Usa el botón sol/luna en la barra superior (landing y app). La preferencia se guarda en `localStorage`.
+Tras iniciar sesión, una barra inferior recorre **33 pasos** por todos los módulos y capacidades. Usa **Ocultar guía** para desactivarla; el botón **Ver guía** la reactiva.
 
 ## Login demo
 

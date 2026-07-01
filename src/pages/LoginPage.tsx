@@ -32,8 +32,8 @@ function LoginForm() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gradient-to-b from-lilac-50 to-surface p-6 dark:from-ink dark:to-bone">
-      <div className="w-full max-w-md rounded-2xl border border-lilac/30 bg-surface p-8 shadow-lg dark:border-lilac/20 dark:shadow-none">
+    <div className="flex min-h-screen items-center justify-center bg-gradient-to-b from-lilac-50 to-white p-6">
+      <div className="w-full max-w-md rounded-2xl border border-lilac/30 bg-white p-8 shadow-lg">
         <Link to="/">
           <Logo className="justify-center" />
         </Link>
